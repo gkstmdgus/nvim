@@ -15,3 +15,8 @@ mapKey("<Esc>", ":nohlsearch<CR>")
 -- indent
 mapKey(">", ">gv", "v")
 mapKey("<", "<gv", "v")
+
+-- bufferline
+mapKey("<leader>n", ":bn<cr>", "n", { desc = "Buffer [N]ext " })
+mapKey("<leader>p", ":bp<cr>", "n", { desc = "Buffer [P]revious " })
+mapKey("<leader>d", ":bd<cr>", "n", { desc = "Buffer [D]elete " })
