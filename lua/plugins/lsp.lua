@@ -11,7 +11,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_insatlled = { "lua_ls", "ts_ls" }
+                ensure_insatlled = { "lua_ls", "ts_ls", "clangd", "pyright" }
             })
         end
     },
@@ -21,6 +21,8 @@ return {
             local lspconfig = require("lspconfig")
             lspconfig.lua_ls.setup({})
             lspconfig.ts_ls.setup({})
+            lspconfig.clangd.setup({})
+            lspconfig.pyright.setup({})
 
             -- vim.lsp.buf.hover
             -- vim.lsp.buf.definition
