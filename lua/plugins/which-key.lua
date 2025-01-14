@@ -47,6 +47,7 @@ return { -- Useful plugin to show you pending keybinds.
 			{ "<leader>f", group = "[F]ind" },
 			{ "<leader>h", group = "Git [H]unk" },
 			{ "<leader>g", group = "[G]it" },
+			{ "<leader>d", group = "[D]ebug" },
 		},
 	},
 }
