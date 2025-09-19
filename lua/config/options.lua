@@ -1,25 +1,25 @@
 local opt = vim.opt
 
--- tab/indentation 
+-- tab/indentation
 opt.tabstop = 4
 opt.shiftwidth = 4
 opt.softtabstop = 4
 opt.expandtab = true
 opt.smartindent = true
-opt.wrap = false 
+opt.wrap = false
 
--- search 
+-- search
 opt.incsearch = true
-opt.ignorecase = true 
+opt.ignorecase = true
 opt.smartcase = true
 
--- visual 
+-- visual
 opt.number = true
-opt.relativenumber = true 
+opt.relativenumber = true
 opt.termguicolors = true
 opt.signcolumn = "yes"
 
--- etc 
+-- etc
 opt.encoding = "UTF-8"
 opt.cmdheight = 1
 opt.scrolloff = 10

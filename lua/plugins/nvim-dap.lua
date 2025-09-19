@@ -1,11 +1,11 @@
 return {
     'mfussenegger/nvim-dap',
     dependencies = {
-        "rcarriga/nvim-dap-ui",      -- debug ui
-        "nvim-neotest/nvim-nio",     -- nvim-dap-ui's dependencies
+        "rcarriga/nvim-dap-ui",  -- debug ui
+        "nvim-neotest/nvim-nio", -- nvim-dap-ui's dependencies
         "mfussenegger/nvim-dap-python"
     },
-    config = function ()
+    config = function()
         local dap = require("dap")
         local dapui = require("dapui")
 
@@ -13,42 +13,42 @@ return {
 
         -- open and cloase the debug windows automatically
         dap.listeners.before.attach.dapui_config = function()
-          dapui.open()
+            dapui.open()
         end
         dap.listeners.before.launch.dapui_config = function()
-          dapui.open()
+            dapui.open()
         end
         dap.listeners.before.event_terminated.dapui_config = function()
-          dapui.close()
+            dapui.close()
         end
         dap.listeners.before.event_exited.dapui_config = function()
-          dapui.close()
+            dapui.close()
         end
 
-        -- set config by language 
-        -- 1. python 
-        require("dap-python").setup() 
+        -- set config by language
+        -- 1. python
+        require("dap-python").setup()
 
-        -- icon 
+        -- icon
         vim.fn.sign_define("DapBreakpoint", {
-        text = "",
-        texthl = "DiagnosticSignError",
-        linehl = "",
-        numhl = "",
+            text = "",
+            texthl = "DiagnosticSignError",
+            linehl = "",
+            numhl = "",
         })
 
         vim.fn.sign_define("DapBreakpointRejected", {
-          text = "", -- or "❌"
-          texthl = "DiagnosticSignError",
-          linehl = "",
-          numhl = "",
+            text = "", -- or "❌"
+            texthl = "DiagnosticSignError",
+            linehl = "",
+            numhl = "",
         })
 
         vim.fn.sign_define("DapStopped", {
-          text = "", -- or "→"
-          texthl = "DiagnosticSignWarn",
-          linehl = "Visual",
-          numhl = "DiagnosticSignWarn",
+            text = "", -- or "→"
+            texthl = "DiagnosticSignWarn",
+            linehl = "Visual",
+            numhl = "DiagnosticSignWarn",
         })
 
         -- keymaps
@@ -66,32 +66,38 @@ return {
 
         -- Continue / Start
         vim.keymap.set("n", "<leader>dc", function()
-          dap.continue()
+            dap.continue()
         end, AddDesc(opts, "Continue / Start"))
 
         -- Step Over
         vim.keymap.set("n", "<leader>do", function()
-          dap.step_over()
+            dap.step_over()
         end, AddDesc(opts, "Step Over"))
 
         -- Step Into
         vim.keymap.set("n", "<leader>di", function()
-          dap.step_into()
+            dap.step_into()
         end, AddDesc(opts, "Steo Into"))
 
         -- Step Out
         vim.keymap.set("n", "<leader>dO", function()
-          dap.step_out()
+            dap.step_out()
         end, AddDesc(opts, "Step Out"))
-			
+
         -- Keymap to terminate debugging
-	    vim.keymap.set("n", "<leader>dq", function()
-	      require("dap").terminate()
+        vim.keymap.set("n", "<leader>dq", function()
+            require("dap").terminate()
         end, AddDesc(opts, "terminate"))
 
         -- Toggle DAP UI
         vim.keymap.set("n", "<leader>du", function()
-          dapui.toggle()
+            dapui.toggle()
         end, AddDesc(opts, "Toggle DAP UI"))
     end
 }
+
+--[[
+
+DAP (Debug Adapter Protocol)
+
+--]]

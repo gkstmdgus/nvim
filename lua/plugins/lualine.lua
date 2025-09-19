@@ -9,3 +9,9 @@ return {
         })
     end
 }
+
+--[[
+
+statusline 플러그인. 아래쪽에 나오는 statusline을 커스텀 가능하도록 만들어준다.
+
+--]]

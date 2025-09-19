@@ -15,3 +15,9 @@ return {
         vim.cmd [[colorscheme tokyonight]]
     end
 }
+
+--[[
+
+color-schema(tokyo-night). 적용법?
+
+--]]
