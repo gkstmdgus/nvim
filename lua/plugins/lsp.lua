@@ -18,11 +18,11 @@ return {
     {
         "neovim/nvim-lspconfig",
         config = function()
-            local lspconfig = require("lspconfig")
-            lspconfig.lua_ls.setup({})
-            lspconfig.ts_ls.setup({})
-            lspconfig.clangd.setup({})
-            lspconfig.pyright.setup({})
+            local lspconfig = vim.lsp.config
+            lspconfig('lua_ls', {})
+            lspconfig('ts_ls', {})
+            lspconfig('clangd', {})
+            lspconfig('pyright', {})
 
             -- vim.lsp.buf.hover
             -- vim.lsp.buf.definition
