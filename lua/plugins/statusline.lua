@@ -6,6 +6,12 @@ return {
             colorscheme = 'nightfly',
             enable = {
                 tabline = 0
+            },
+            active = {
+                left = {
+                    { 'mode',         'readonly' },
+                    { 'relativepath', 'modified' }
+                }
             }
         }
     end
