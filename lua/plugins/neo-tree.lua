@@ -17,6 +17,13 @@ return {
                     ["<space>"] = "open",
                 },
             },
+            default_component_configs = {
+                icon = {
+                    folder_closed = '▶', -- 닫힌 폴더 아이콘 (오른쪽 화살표)
+                    folder_open = '▼', -- 열린 폴더 아이콘 (아래쪽 화살표)
+                    -- 기타 아이콘 설정도 여기에 추가할 수 있습니다.
+                },
+            },
         })
     end
 }
@@ -25,4 +32,5 @@ return {
 
 tree 구조로 파일 탐색하는 플러그인
 
+--]]
 --]]
