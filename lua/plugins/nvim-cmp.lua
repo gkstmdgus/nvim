@@ -8,10 +8,10 @@ return {
                 version = "v2.*",
                 build = "make install_jsregexp",
             },
-            "saadparwaiz1/cmp_luasnip", -- 스니펫 소스
-            "hrsh7th/cmp-nvim-lsp", -- LSP 소스(LSP가 제공하는 단어)
-            "hrsh7th/cmp-buffer",  -- 버퍼 소스(현재 버퍼 단어)
-            "hrsh7th/cmp-path",    -- 파일 경로
+            "saadparwaiz1/cmp_luasnip",     -- 스니펫 소스
+            "hrsh7th/cmp-nvim-lsp",         -- LSP 소스(LSP가 제공하는 단어)
+            "hrsh7th/cmp-buffer",           -- 버퍼 소스(현재 버퍼 단어)
+            "hrsh7th/cmp-path",             -- 파일 경로
             "rafamadriz/friendly-snippets", -- 스니펫 모음집
         },
         config = function()
@@ -32,19 +32,23 @@ return {
                     documentation = cmp.config.window.bordered(),
                 },
                 mapping = cmp.mapping.preset.insert({
-                    ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-                    ["<C-f>"] = cmp.mapping.scroll_docs(4),
+                    ["<C-n>"] = cmp.mapping.select_next_item(),
+                    ["<C-p>"] = cmp.mapping.select_prev_item(),
                     ["<C-Space>"] = cmp.mapping.complete(),
                     ["<C-e>"] = cmp.mapping.abort(),
                     ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
                 }),
                 -- autocompletion sources
                 sources = cmp.config.sources({
-                    { name = "nvim_lsp" },     -- lsp
+                    { name = "nvim_lsp" },                    -- lsp
                     { name = "buffer",  max_item_count = 5 }, -- text within current buffer
                     { name = "path",    max_item_count = 3 }, -- file system paths
                     { name = "luasnip", max_item_count = 3 }, -- snippets
                 }),
+                -- ghost_text
+                experimental = {
+                    ghost_text = true -- this feature conflict with copilot.vim's preview.
+                }
             })
         end,
     },

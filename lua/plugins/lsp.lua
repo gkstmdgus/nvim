@@ -26,9 +26,9 @@ return {
 
             -- vim.lsp.buf.hover
             -- vim.lsp.buf.definition
-            keyMapper('K', vim.lsp.buf.hover)
-            keyMapper('gd', vim.lsp.buf.definition)
-            keyMapper('<leader>ca', vim.lsp.buf.code_action)
+            keyMapper('K', vim.lsp.buf.hover, 'n', { desc = "Hover" })
+            keyMapper('gd', vim.lsp.buf.definition, 'n', { desc = "Go to definition" })
+            keyMapper('<leader>ca', vim.lsp.buf.code_action, 'n', { desc = "Code action" })
         end
     }
 }
