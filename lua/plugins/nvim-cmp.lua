@@ -45,10 +45,10 @@ return {
                     { name = "path",    max_item_count = 3 }, -- file system paths
                     { name = "luasnip", max_item_count = 3 }, -- snippets
                 }),
-                -- ghost_text
-                experimental = {
-                    ghost_text = true -- this feature conflict with copilot.vim's preview.
-                }
+                -- -- ghost_text
+                -- experimental = {
+                --     ghost_text = true -- this feature conflict with copilot.vim's preview.
+                -- }
             })
         end,
     },
