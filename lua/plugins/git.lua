@@ -27,7 +27,7 @@ return {
     {
         "tpope/vim-fugitive",
         config = function()
-            vim.keymap.set("n", "<leader>gs", ":Git<CR>", { desc = "[G]it [S]tatus" })
+            vim.keymap.set("n", "<leader>gs", ":Neotree float git_status<CR>", { desc = "[G]it [S]tatus" })
             vim.keymap.set("n", "<leader>gb", ":Git branch<CR>", { desc = "[G]it [B]ranch" })
             vim.keymap.set(
                 "n",
