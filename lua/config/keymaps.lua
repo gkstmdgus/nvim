@@ -20,4 +20,4 @@ mapKey("<", "<gv", "v")
 -- bufferline
 mapKey("<leader>]", ":bn<cr>", "n", { desc = "Buffer [N]ext " })
 mapKey("<leader>[", ":bp<cr>", "n", { desc = "Buffer [P]revious " })
-mapKey("<leader>d", ":Bdelete<cr>", "n", { desc = "Buffer [D]elete " })
+mapKey("<leader>q", ":Bdelete<cr>", "n", { desc = "Buffer [Q]uit " })
