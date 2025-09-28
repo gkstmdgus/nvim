@@ -19,8 +19,8 @@ return {
                 map("n", "<leader>hd", gitsigns.diffthis, { desc = "git [d]iff against index" })
 
                 -- Toggles
-                map("n", "<leader>tb", gitsigns.toggle_current_line_blame, { desc = "[T]oggle git show [b]lame line" })
-                map("n", "<leader>tD", gitsigns.toggle_deleted, { desc = "[T]oggle git show [D]eleted" })
+                map("n", "<leader>gB", gitsigns.toggle_current_line_blame, { desc = "toggle [G]it show [B]lame line" })
+                map("n", "<leader>gD", gitsigns.toggle_deleted, { desc = "toggle [G]it show [D]eleted" })
             end,
         },
     },
